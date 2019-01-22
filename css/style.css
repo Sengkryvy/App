@@ -14,6 +14,7 @@ body *, * {
     backface-visibility: hidden;
     box-sizing: border-box;
     color: whitesmoke;
+    /* margin-left: 15px; */
 
 }
 
@@ -36,6 +37,7 @@ aside {
     transition: all 0.5s ease;
     overflow: hidden;
     z-index: 10;
+    /* margin-left: 100px */
 }
 
 aside ul {
@@ -87,8 +89,18 @@ nav.bottom {
 .app-wrapper {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to left bottom, #34363b, #274241, #174444,  #16575f);
+    /* position: relative; */
 }
+
+/* .app-wrapper .app {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    position: fixed;
+} */
 
 .aside {
     left: -60%;
