@@ -77,6 +77,7 @@ aside .bread {
     right: 0;
     top: 0;
     height: 75px;
+    
     background-color: #41bebe;
     position: fixed;
     /* transition: all 0.5s none; */
@@ -90,6 +91,7 @@ aside .bread {
     height: 75px;
     background-color: #5a6464;
     position: fixed;
+    /* z-index: 11; */
 }
 
 .app-wrapper {
@@ -105,12 +107,16 @@ aside .bread {
 .content {
     position: fixed;
     width: 100%;
-    background: #5a6464;
+    height: 100%;
+    /* margin-bottom: 100px; */
+    background: #3e5c94;
 }
 
 .app {
     position: absolute ;
     margin-top: 75px;
+    width: 100%;
+    margin-bottom: 75px;
 
 }
 
