@@ -49,7 +49,11 @@ i {
 
 aside ul li *:hover {
     text-decoration: none;
-    color: #41bebe;
+    color: #008fd1;
+}
+
+aside ul li * {
+    color: #e6e6e6;
 }
 
 
@@ -134,6 +138,11 @@ aside .bread {
     list-style-type: none;
 }
 
+.track-card:hover {
+    cursor: pointer;
+    box-shadow:0px 0px 10px 1px #949494; 
+}
+
 .track-card {
     position: relative;
     /* width: 15%; */
@@ -147,16 +156,32 @@ aside .bread {
     /* font-size: 0.9rem; */
 }
 
-.track-card .info .tittle {
-    font-weight: bold;
+.track-card .info .title {
+    font-weight: bolder;
     font-size: 16px;
     color: #ffffff
 }
 
+.track-card .info .title:hover {
+    text-decoration: none;
+    font-size: 16px;
+    color: #09daff;
+    list-style: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
 .track-card .info .artist {
     font-weight: lighter;
-    color: #ffffff9a;
+    color: #afafaf9a;
     font-size: 14px;
+}
+
+
+.track-card .info .artist:hover {
+    text-decoration: none;
+    color: #ffffff;
+    list-style-type: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 
