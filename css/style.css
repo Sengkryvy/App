@@ -16,30 +16,23 @@ body *,
     box-sizing: border-box;
     color: whitesmoke;
     transition: all 0.5s ease;
-    /* margin-left: 15px; */
-
 }
 
 body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to left bottom, #34363b, #274241, #174444, #16575f);
+    overflow: auto;
 }
 
 aside {
-    /* width: 20%; */
-    /* margin-top: -44px; */
     background: #062e2e;
-    /* height: 100%; */
-    /* padding: 20px; */
-    /* flex-direction: column;    */
     margin-left: -60%;
     left: 60%;
-    /* position: inherit; */
     transition: all 0.5s ease;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 10;
-    /* margin-left: 100px */
+    position: fixed;
 }
 
 aside ul {
@@ -72,26 +65,8 @@ aside .bread {
     margin-top: 40px;
 }
 
-.nav-top {
-    width: 100%;
-    right: 0;
-    top: 0;
-    height: 75px;
-    
-    background-color: #41bebe;
-    position: fixed;
-    /* transition: all 0.5s none; */
-
-}
-
-.nav-bottom {
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    height: 75px;
-    background-color: #5a6464;
-    position: fixed;
-    /* z-index: 11; */
+.aside {
+    left: -60%;
 }
 
 .app-wrapper {
@@ -101,7 +76,14 @@ aside .bread {
     padding: 0;
     background: linear-gradient(to left bottom, #34363b, #274241, #174444, #16575f);
     z-index: -1;
-    /* position: relative; */
+}
+
+.app {
+    position: fixed;
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 75px;
+    overflow: auto;
 }
 
 .content {
@@ -112,40 +94,62 @@ aside .bread {
     background: #3e5c94;
 }
 
-.app {
-    position: absolute ;
-    margin-top: 75px;
-    width: 100%;
-    margin-bottom: 75px;
 
-}
 .ml-50 {
     margin-left: 50px;
 }
 
-/* .app-wrapper .app {
+.nav-top {
     width: 100%;
-    height: 100%;
-    left: 0;
-    background-color: antiquewhite;
+    right: 0;
+    top: 0;
+    height: 50px;
+    background-color: #41bebe;
     position: fixed;
-} */
+}
 
-.aside {
-    left: -60%;
-
-    /* background: #41bebe; */
+.nav-bottom {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 75px;
+    background-color: #5a6464;
+    position: fixed;
 }
 
 .toggled {
     width: 100%;
     background-color: #c74eb3
-        /* background: #41bebe; */
+}
+
+.track-list {
+    list-style: none;
+}
+
+.track-card {
+    position: relative;
+}
+
+.artwork {
+    width: 100%;    
+}
+
+.artwork span {
+    /* position: inherit; */
+    padding-bottom: 100%;
+    /* padding: 0; */
+    margin: 0;
+    /* font-size: 100px; */
+    display: block;
+    
+}
+
+.column {
+    /* width: 100px;
+    height: 100px; */
 }
 
 #toggle {
-    /* visibility: hidden; */
-    /* display: none; */
     z-index: 1000;
     position: fixed;
 }

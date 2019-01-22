@@ -20,8 +20,8 @@ $(document).ready(function () {
 
 $("#toggle").click(function () {
     $("aside").toggleClass("aside");
-    $("#content").toggleClass("ml-0 col-md-12 col-sm-6 col-xl-12 col-lg-12");
-    $("#content").toggleClass("offset   -sm-6");
+    $("#content").toggleClass("ml-0 col-md-12 col-xl-12 col-lg-12");
+
     // $("#content").toggleClass("offset-0, offset-md-0, offset-lg-0, offset-xl-0, offset-sm-0, col-sm-12 col-12 col-md-6 col-lg-6 col-xl-12");
     $("#search").toggleClass("ml-md-4")
     // $("#search").toggleClass("ml-50")
