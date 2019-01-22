@@ -15,7 +15,6 @@ body *,
     backface-visibility: hidden;
     box-sizing: border-box;
     color: whitesmoke;
-    transition: all 0.5s ease;
     /* margin-left: 15px; */
 
 }
@@ -72,18 +71,16 @@ aside .bread {
     margin-top: 40px;
 }
 
-.nav-top {
+nav.top {
     width: 100%;
     right: 0;
     top: 0;
     height: 75px;
     background-color: #41bebe;
     position: fixed;
-    /* transition: all 0.5s none; */
-
 }
 
-.nav-bottom {
+nav.bottom {
     width: 100%;
     right: 0;
     bottom: 0;
@@ -98,20 +95,7 @@ aside .bread {
     margin: 0;
     padding: 0;
     background: linear-gradient(to left bottom, #34363b, #274241, #174444, #16575f);
-    z-index: -1;
     /* position: relative; */
-}
-
-.content {
-    position: fixed;
-    width: 100%;
-    background: #5a6464;
-}
-
-.app {
-    position: absolute ;
-    margin-top: 75px;
-
 }
 
 /* .app-wrapper .app {
@@ -124,14 +108,7 @@ aside .bread {
 
 .aside {
     left: -60%;
-
     /* background: #41bebe; */
-}
-
-.toggled {
-    width: 100%;
-    background-color: #c74eb3
-        /* background: #41bebe; */
 }
 
 #toggle {
@@ -147,7 +124,7 @@ aside .bread {
     }
 
     .aside {
-        /* left: 60%; */
+        left: 60%;
         /* background: #41bebe; */
     }
 

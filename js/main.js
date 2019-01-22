@@ -20,6 +20,8 @@ $(document).ready(function () {
 
 $("#toggle").click(function () {
     $("aside").toggleClass("aside");
+    // $("#home").toggleClass("col-sm-12 col-12 col-md-12 col-lg-12 col-xl-12")
+    $(".content").toggleClass("offset-lg-0 offset-xl-0 offset-md-0 offset-sm-0 offset-0  col-sm-12 col-12 col-md-12 col-lg-12 col-xl-12")
 });
 
 function play() {
