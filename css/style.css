@@ -119,6 +119,9 @@ aside .bread {
     margin-bottom: 75px;
 
 }
+.ml-50 {
+    margin-left: 50px;
+}
 
 /* .app-wrapper .app {
     width: 100%;
@@ -143,8 +146,8 @@ aside .bread {
 #toggle {
     /* visibility: hidden; */
     /* display: none; */
-    z-index: 100;
-    position: absolute;
+    z-index: 1000;
+    position: fixed;
 }
 
 @media(max-width:768px) {
@@ -153,7 +156,7 @@ aside .bread {
     }
 
     .aside {
-        /* left: 60%; */
+        left: 60%;
         /* background: #41bebe; */
     }
 
