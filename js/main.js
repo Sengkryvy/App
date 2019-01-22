@@ -18,6 +18,10 @@ $(document).ready(function () {
 
 });
 
+$("#toggle").click(function () {
+    $("aside").toggleClass("aside");
+});
+
 function play() {
 
 }

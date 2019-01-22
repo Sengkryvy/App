@@ -1,5 +1,7 @@
 html,
 
+
+
 a, .link {
     color:inherit;
     text-decoration: none;
@@ -24,15 +26,17 @@ body {
 
 aside {
     /* width: 20%; */
-    background: #131414;
+    /* margin-top: -44px; */
+    background: #062e2e;
     height: 100%;
     padding: 20px;
     flex-direction: column;   
-    margin-left: -40%;
-    left: 40%;
-    position: fixed;
+    margin-left: -60%;
+    left: 60%;
+    position: inherit;
     transition: all 0.5s ease;
     overflow: hidden;
+    z-index: 10;
 }
 
 aside ul {
@@ -59,7 +63,8 @@ aside .row {
 aside .bread {
     font-weight: 700;
     font-size: 25px;
-    margin-left: 10px;  
+    margin-left: 10px;
+    margin-top: 40px;  
 }
 
 .app-wrapper {
@@ -68,12 +73,29 @@ aside .bread {
     background: linear-gradient(to left bottom, #34363b, #1a1b1d, #131414,  #202229);
 }
 
+.aside {
+    left: -60%;
+    /* background: #41bebe; */
+}
+
+#toggle {
+    /* visibility: hidden; */
+    /* display: none; */
+    z-index: 100;
+    position: absolute;
+}
+
 @media(max-width:768px){
     aside {
         left: 0%;
     }
+    .aside {
+        left: 60%;
+        /* background: #41bebe; */
+    }
 
 }
+
 
 
 
