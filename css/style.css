@@ -145,21 +145,31 @@ aside .bread {
 
 .track-card {
     position: relative;
-    /* width: 15%; */
+    /* box-shadow:0px 0px 50px #313131;  */
+    width: 16%;
+    block-size: 10%;
     /* margin: 10px; */
 }
 
 .track-card .info {
     background-color: #112b27;
     border-radius: 0 0 5px 5px;
-    padding: 10px;
+    padding: 5px 10px;
+    margin: 0;
+
     /* font-size: 0.9rem; */
 }
 
-.track-card .info .title {
+.track-card .info .title * {
+    margin: 0;
     font-weight: bolder;
+    padding: 0;
     font-size: 16px;
-    color: #ffffff
+    color: #ffffff;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .track-card .info .title:hover {
@@ -170,10 +180,16 @@ aside .bread {
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-.track-card .info .artist {
-    font-weight: lighter;
-    color: #afafaf9a;
+
+.track-card .info .artist * {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 14px;
+    color: #afafaf9a;
+    font-weight: lighter;
+
 }
 
 
@@ -194,6 +210,7 @@ aside .bread {
     display: block;
     background-size: cover;
     border-radius: 5px 5px 0 0;
+    background-position: center;
 }
 
 .column {
