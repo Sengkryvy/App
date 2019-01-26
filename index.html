@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/track.css">
+    <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/aside.css">
 </head>
 
@@ -39,7 +39,38 @@
             <!-- here the content -->
             <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
                 <!-- explore page -->
-                <div class="recently-add"> <!-- recently-add -->
+
+                <div class="px-2">
+                    <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
+                    <ul class="stat-board d-flex justify-content-between">
+                        <li class="col-1">#</li>
+                        <li>Title</li>
+                        <li>Artist</li>
+                        <li>Album</li>
+                    </ul>
+                    <ul style="overflow: scroll;" class="track-list mx-0 row">
+                        <li id="card" class="stat-card p-2 d-flex w-100 text-center">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info d-flex">
+                                <a href="" class="title">
+                                    <p>Sunflowefadfa dfdfdafadfdfadfr</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Post MaLone</p>
+                                </a>
+                                <a href="" class="album">
+
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recently-add">
+                    <!-- recently-add -->
                     <div style="display: flex" class="px-2">
                         <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
                         <section class="w-100 list-more d-flex justify-content-end">
@@ -130,10 +161,11 @@
                                 </a>
                             </div>
                         </li>
-                    </ul> 
+                    </ul>
                 </div> <!-- end of recently-add -->
 
-                <div class="trending"> <!-- trending -->
+                <div class="trending">
+                    <!-- trending -->
                     <div style="display: flex" class="px-2">
                         <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
                         <section class="w-100 list-more d-flex justify-content-end">
@@ -152,7 +184,7 @@
                             </div>
                             <div class="info">
                                 <a href="" class="title">
-                                    <p>Sunflowefadfa dfdfdafadfdfadfr</p>
+                                    <p>Sunflower</p>
                                 </a>
                                 <a href="" class="artist">
                                     <p>Post MaLone</p>
@@ -224,7 +256,7 @@
                                 </a>
                             </div>
                         </li>
-                    </ul> 
+                    </ul>
                 </div> <!-- end of trending -->
                 <!-- end of explore page -->
 

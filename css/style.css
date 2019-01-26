@@ -93,7 +93,10 @@ body {
     position: fixed;
 }
 
-
+ul, li {
+    list-style-type: none;
+    text-decoration: none;
+}
 
 
 
