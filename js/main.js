@@ -19,18 +19,6 @@ $(document).ready(function () {
         b.pause();
    });
 
-    // $("#card, .track-card").clicl( function () {
-    //     alert("First handler for .toggle() called.");
-    // }, function () {
-    //     alert("Second handler for .toggle() called.");
-    // });
-
-    // $('#card').click(function () {
-    //         alert("FIRST handler for .toggle() called.");
-    //     },
-    //     function () {
-    //         alert("Second handler for .toggle() called.");
-    //     });
 
     $("#toggle").click(function () {
         // function playSound();
@@ -78,16 +66,15 @@ $(document).ready(function () {
 
 var a = new Audio('source/music/In The End - Linkin Park.mp3');
 var b = new Audio('https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/In%20The%20End%20-%20Linkin%20Park.mp3?alt=media&token=8d74a9c1-77a5-4d38-baf4-d8bb4113f34f');
-function playSound() {
-    alert("hello")
+// function playSound() {
 
-    a.play();
-}
+//     a.play();
+// }
 
-function pauseSound() {
-    // alert("hello")
-    a.pause();
-}
+// function pauseSound() {
+
+//     a.pause();
+// }
 
 
 

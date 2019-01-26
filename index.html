@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
 
-
+    <link rel="stylesheet" type="text/css" href="source/font/proxima-nova-web-fonts-master/proxima-nova-web-fonts-master/fonts/fonts.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/track.css">
+    <link rel="stylesheet" href="css/aside.css">
 </head>
 
 <body>
-
+    <!-- <div style="margin-bottom: 100px;"></div> -->
     <div class="row app-wrapper hide">
 
-        <bottom onclick="playSound()" id="toggle"><i class="material-icons">menu</i></bottom> <!-- sidebar -->
+        <bottom id="toggle"><i class="material-icons">menu</i></bottom> <!-- sidebar -->
         <aside class="col-md-3 col-lg-2 col-6 col-sm-4 h-100">
             <div class="bread">Music</div>
             <ul class="link">
@@ -28,424 +30,203 @@
             </ul>
         </aside> <!-- end of sidebar -->
 
+        <nav id="home" class="navbar col-12 nav-top">
+            <!-- top navbar -->
+
+            <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">Search</div>
+        </nav> <!-- end of top navbar -->
         <div class="app">
-
-            <nav id="home" class="navbar col-12 nav-top">
-                <!-- top navbar -->
-                <p>Audio #1</p>
-                <audio id="#audio" src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/In%20The%20End%20-%20Linkin%20Park.mp3?alt=media&token=8d74a9c1-77a5-4d38-baf4-d8bb4113f34f" controls preload="metadata">
-                    <p>Alas, your browser doesn't support html5 audio.</p>
-                </audio>
-
-                
-
-                <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">Search</div>
-            </nav> <!-- end of top navbar -->
-
             <!-- here the content -->
-            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
-
+            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
                 <!-- explore page -->
-                <ul style="overflow: scroll;" class="track-list mx-0 row">
-                    <li id="card" class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Sunflowefadfa dfdfdafadfdfadfr</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Post MaLone</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Young dumb and broke</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Khalid</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>FRIENDS</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>I like me better</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>LAUV</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Happier</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Wake me up</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Avicii</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="track-list row mx-0">
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Sunflowefadfa dfdfdafadfdfadfr</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Post MaLone</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Young dumb and broke</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Khalid</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>FRIENDS</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>I like me better</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>LAUV</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Happier</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Wake me up</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Avicii</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="track-list row mx-0">
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Sunflowefadfa dfdfdafadfdfadfr</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Post MaLone</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Young dumb and broke</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Khalid</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>FRIENDS</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>I like me better</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>LAUV</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Happier</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Wake me up</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Avicii</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="track-list row mx-0">
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Sunflowefadfa dfdfdafadfdfadfr</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Post MaLone</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Young dumb and broke</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Khalid</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>FRIENDS</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>I like me better</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>LAUV</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Happier</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Wake me up</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Avicii</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="track-list row mx-0">
-                    <li class="track-card p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Sunflowefadfa dfdfdafadfdfadfr</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Post MaLone</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Young dumb and broke</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Khalid</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>FRIENDS</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>I like me better</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>LAUV</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Happier</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Marshmello</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="track-card col-auto p-2">
-                        <div class="artwork">
-                            <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                        </div>
-                        <div class="info">
-                            <a href="" class="title">
-                                <p>Wake me up</p>
-                            </a>
-                            <a href="" class="artist">
-                                <p>Avicii</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul> <!-- end of explore page -->
+                <div class="recently-add"> <!-- recently-add -->
+                    <div style="display: flex" class="px-2">
+                        <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
+                        <section class="w-100 list-more d-flex justify-content-end">
+                            <div>
+                                <a>Show all</a>
+                            </div>
+                            <button class="material-icons">keyboard_arrow_left</button>
+                            <button class="material-icons">keyboard_arrow_right</button>
+                        </section>
+                    </div>
+
+                    <ul style="overflow: scroll;" class="track-list mx-0 row">
+                        <li id="card" class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Sunflowefadfa dfdfdafadfdfadfr</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Post MaLone</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Young dumb and broke</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Khalid</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>FRIENDS</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Marshmello</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>I like me better</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>LAUV</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Happier</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Marshmello</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Wake me up</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Avicii</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> <!-- end of recently-add -->
+
+                <div class="trending"> <!-- trending -->
+                    <div style="display: flex" class="px-2">
+                        <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
+                        <section class="w-100 list-more d-flex justify-content-end">
+                            <div>
+                                <a>show all</a>
+                            </div>
+                            <button class="material-icons">keyboard_arrow_left</button>
+                            <button class="material-icons">keyboard_arrow_right</button>
+                        </section>
+                    </div>
+
+                    <ul style="overflow: scroll;" class="track-list mx-0 row">
+                        <li id="card" class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Sunflowefadfa dfdfdafadfdfadfr</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Post MaLone</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Young dumb and broke</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Khalid</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>FRIENDS</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Marshmello</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>I like me better</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>LAUV</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Happier</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Marshmello</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="track-card p-2">
+                            <div class="artwork">
+                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                            </div>
+                            <div class="info">
+                                <a href="" class="title">
+                                    <p>Wake me up</p>
+                                </a>
+                                <a href="" class="artist">
+                                    <p>Avicii</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div> <!-- end of trending -->
+                <!-- end of explore page -->
 
             </div>
 
