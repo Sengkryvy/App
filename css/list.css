@@ -10,6 +10,10 @@
 
 }
 
+.list-artwork {
+    width: 60px;
+}
+
 .list-more * {
     background: transparent;
     color: #c2c2c2;
@@ -105,7 +109,6 @@
 
 .artwork {
     width: 100%;
-
 }
 
 .artwork span {
