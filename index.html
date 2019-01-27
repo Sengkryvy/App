@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/player.css">
 </head>
 
 <body>
-    <!-- <div style="margin-bottom: 100px;"></div> -->
     <div class="row app-wrapper hide">
 
-        <bottom id="toggle"><i class="material-icons">menu</i></bottom> <!-- sidebar -->
+        <bottom id="toggle"><i class="material-icons">menu</i></bottom>
+
+        <!-- sidebar -->
         <aside class="col-md-3 col-lg-2 col-6 col-sm-4 h-100">
             <div class="bread">Music</div>
             <ul class="link">
@@ -28,26 +30,33 @@
                 <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li>
                 <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li>
             </ul>
-        </aside> <!-- end of sidebar -->
+        </aside>
+        <!-- end of sidebar -->
 
-        <nav id="home" class="navbar col-12 nav-top">
-            <!-- top navbar -->
-
-            <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">Search</div>
-        </nav> <!-- end of top navbar -->
         <div class="app">
-            <!-- here the content -->
-            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
-                <!-- explore page -->
 
+            <!-- top navbar -->
+            <nav id="home" class="navbar col-12 nav-top">
+                <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">
+                    <input id="search-input" type="text" placeholder="Search..">
+                </div>
+            </nav>
+            <!-- end of top navbar -->
+
+            <!-- here the content -->
+            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content"
+                class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
+        
+    <!-- explore page -->
+
+                <!-- weekly chart -->
                 <div class="px-2">
                     <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
-
                     <div class="row">
-                        <table class="table table-hover tab-nowrap col-12 col-md-6">
+                        <table class="table table-hover tab-nowrap col-12">
                             <thead>
                                 <tr class="col-12">
-                                    <th style="width: 70px;">#</th>
+                                    <th style="width: 60px;">#</th>
                                     <th style="width: 40%;">Title</th>
                                     <th style="width: 20%;">Artist</th>
                                     <th style="width: 20%;">Album</th>
@@ -64,7 +73,7 @@
                                     <td>Sunflower</td>
                                     <td>Post MaLone</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -76,7 +85,7 @@
                                         afsafasdf fdfa f adf asf a lkrfoiaren</td>
                                     <td>Khalid</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="list-artwork">
@@ -87,7 +96,7 @@
                                     <td>Sunflower</td>
                                     <td>Post MaLone</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -99,7 +108,7 @@
                                         afsafasdf fdfa f adf asf a lkrfoiaren</td>
                                     <td>Khalid</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="list-artwork">
@@ -110,7 +119,7 @@
                                     <td>Sunflower</td>
                                     <td>Post MaLone</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -122,7 +131,7 @@
                                         afsafasdf fdfa f adf asf a lkrfoiaren</td>
                                     <td>Khalid</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="list-artwork">
@@ -133,7 +142,7 @@
                                     <td>Sunflower</td>
                                     <td>Post MaLone</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -145,17 +154,17 @@
                                         afsafasdf fdfa f adf asf a lkrfoiaren</td>
                                     <td>Khalid</td>
                                     <td></td>
-                                    <td></td>
+                                    <td>0:00</td>
                                 </tr>
 
                             </tbody>
                         </table>
                     </div>
-
                 </div>
+                <!-- weekly chart -->
 
+                <!-- recently-add -->
                 <div class="recently-add">
-                    <!-- recently-add -->
                     <div style="display: flex" class="px-2">
                         <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
                         <section class="w-100 list-more d-flex justify-content-end">
@@ -247,10 +256,12 @@
                             </div>
                         </li>
                     </ul>
-                </div> <!-- end of recently-add -->
+                </div>
+                <!-- end of recently-add -->
 
+                <!-- trending -->
                 <div class="trending">
-                    <!-- trending -->
+                    
                     <div style="display: flex" class="px-2">
                         <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
                         <section class="w-100 list-more d-flex justify-content-end">
@@ -263,7 +274,7 @@
                     </div>
 
                     <ul style="overflow: scroll;" class="track-list mx-0 row">
-                        <li id="card" class="track-card p-2">
+                        <li id="card" class="track-card p-1">
                             <div class="artwork">
                                 <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
                             </div>
@@ -342,19 +353,58 @@
                             </div>
                         </li>
                     </ul>
-                </div> <!-- end of trending -->
-                <!-- end of explore page -->
+                </div>
+                <!-- end of trending -->
+
+    <!-- end of explore page -->
 
             </div>
+        </div>
+        <!-- end of content -->
 
-        </div> <!-- end of content -->
-
+        <!-- bottom navbar -->
         <nav class="navbar col-12 nav-bottom">
-            <!-- bottom navbar -->
+            <div class="player-container row">
+                <div class="play-info d-flex col-3">
+                    <div class="play-artwork">
+                        <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                    </div>
+                    <div class="info my-auto px-2">
+                        <a href="" class="title">
+                            <p>Sunflower</p>
+                        </a>
+                        <a href="" class="artist">
+                            <p>Post MaLone</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="play-progress col-6 col-md-7 my-auto">
+                    <div class="control">
+                        <button class="px-3" id="prev"><i class="material-icons">skip_previous</i></button>
+                        <button class="px-1" id="play"><i class="material-icons">play_arrow</i></button>
+                        <button class="px-3" id="next"><i class="material-icons">skip_next</i></button>
+                    </div>
+                    <div style="padding: 7px 5px 0 5px;">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="play-control col-2 my-auto d-flex">
+                    <button><i class="material-icons">volume_up</i></button>
+                    <div class="col-10 m-0 p-0 my-auto">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </nav>
-
-
+        <!-- end of bottom navbar -->
 
     </div>
 
