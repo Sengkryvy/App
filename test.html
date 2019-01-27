@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-   <input type="text">
+    <audio id="my-audio" src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/In%20The%20End%20-%20Linkin%20Park.mp3?alt=media&token=8d74a9c1-77a5-4d38-baf4-d8bb4113f34f"></audio>
+    <p id="myVar"></p>
+
+    <script>
+        var x = document.getElementById("myVar");
+        var myAudio = document.getElmentById("my-audio");
+        // myAudio.duration; // => duration, in seconds
+        x.innerHTML = myAudio.duration;
+    </script>
 </body>
+
 </html>
