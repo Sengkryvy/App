@@ -25,6 +25,10 @@ aside ul li *:hover {
     color: #008fd1;
 }
 
+.active-menu a, .active-menu a i {
+    color: #008fd1;
+}
+
 aside ul li * {
     color: #e6e6e6;
 }

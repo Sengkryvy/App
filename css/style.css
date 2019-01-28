@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 a,
-.link {
+.link,
+.menu,
+i, button {
     color: inherit;
     text-decoration: none;
     font-size: 100%;
     cursor: pointer;
+}
+
+.visible {
+    display: vi;
 }
 
 .app-wrapper {
@@ -51,11 +57,14 @@ button {
     border: 0;
 }
 
+button:focus {
+    outline: 0;
+}
+
 button:active {
     border: none;
     text-decoration: none;
     text-shadow: none;
-
 }
 
 
@@ -69,7 +78,7 @@ button:active {
 }
 
 h1 {
-    font-size: 1.7  rem;
+    font-size: 1.7 rem;
 }
 
 .ml-50 {
@@ -101,7 +110,7 @@ h1 {
     padding: 4px 30px;
     background: #34363b;
     border-radius: 50px;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .table thead {
@@ -120,9 +129,9 @@ h1 {
 }
 
 .tab-nowrap td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 }
 
