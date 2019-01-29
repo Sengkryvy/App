@@ -6,13 +6,13 @@ $(document).ready(function () {
         });
     };
 
-    $(".track-card").clickToggle(
-        function () {
-            b.play();
-        },
-        function () {
-            b.pause();
-    });
+    // $(".track-card").clickToggle(
+    //     function () {
+    //         b.play();
+    //     },
+    //     function () {
+    //         b.pause();
+    // });
 
     $("#toggle").click(function () {
         $("aside").toggleClass("aside");
