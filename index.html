@@ -15,22 +15,17 @@
 </head>
 
 <body>
-    <div class="row app-wrapper hide">
+    <div class="row app-wrapper">
 
         <bottom id="toggle"><i class="material-icons">menu</i></bottom>
-
         <!-- sidebar -->
         <aside class="col-md-3 col-lg-2 col-6 col-sm-4 h-100">
             <div class="bread">Music</div>
             <ul class=".menu">
-                <li class="active-menu"><a class="row align-items-center" href="#"><i  id="hello" class="material-icons">explore</i>Explore</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">music_note</i>Songs</a></li>
-<!-- =======
-            <ul class="link">
-                <li><a class="row align-items-center" href="index.html"><i class="material-icons">explore</i>Explore</a></li>
-                <li><a class="row align-items-center" href="songs.html"><i class="material-icons">music_note</i>Songs</a></li> -->
-                <li><a class="row align-items-center" href="#"><i class="material-icons">library_music </i>Albums</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li>
+                <li><a id="menu-explore" class="row align-items-center active-menu" href="#"><i class="material-icons active-menu">explore</i>Explore</a></li>
+                <li><a id="menu-songs" class="row align-items-center" href="#"><i class="material-icons">music_note</i>Songs</a></li>
+                <li><a id="menu-albums" class="row align-items-center" href="#"><i class="material-icons">library_music </i>Albums</a></li>
+                <li><a id="menu-artists" class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li>
                 <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li>
                 <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li>
             </ul>
@@ -40,7 +35,7 @@
         <div class="app">
 
             <!-- top navbar -->
-            <nav id="home" class="navbar col-12 nav-top">
+            <nav id="nav-top" class="navbar col-12 nav-top">
                 <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">
                     <input id="search-input" type="text" placeholder="Search..">
                 </div>
@@ -48,23 +43,359 @@
             <!-- end of top navbar -->
 
             <!-- here the content -->
-            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content"
-                class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
-        
-    <!-- explore page -->
+            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
 
-                <!-- weekly chart -->
-                <div id="weekly-chart" style="display: none;" class="px-2">
-                    <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
+                <!-- explore page -->
+                <div id="explore">
+                    <!-- weekly chart -->
+                    <div id="weekly-chart" class="px-2">
+                        <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
+                        <div class="row list-songs">
+                            <table class="table table-hover tab-nowrap col-12">
+                                <thead>
+                                    <tr class="col-12">
+                                        <th style="width: 60px;">#</th>
+                                        <th style="width: 40%;">Title</th>
+                                        <th style="width: 20%;">Artist</th>
+                                        <th style="width: 20%;">Album</th>
+                                        <th style="width: 10%;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row" class="list-artwork">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                                            </div>
+                                        </td>
+                                        <td>Sunflower</td>
+                                        <td>Post MaLone</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                            </div>
+                                        </th>
+                                        <td class="td-nowrap">Yound dumb and broke</td>
+                                        <td>Khalid</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="list-artwork">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000334054377-fgpyvw-t500x500.jpg");'></span>
+                                            </div>
+                                        </td>
+                                        <td>Mine</td>
+                                        <td>Bazzi</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                            </div>
+                                        </th>
+                                        <td class="td-nowrap">Better</td>
+                                        <td>Khalid</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="list-artwork">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000390226092-1vzsos-t500x500.jpg")'></span>
+                                            </div>
+                                        </td>
+                                        <td>Happier</td>
+                                        <td>Marshmello</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-8n24PQuaQZWL-0-t500x500.jpg");'></span>
+                                            </div>
+                                        </th>
+                                        <td class="td-nowrap">I like me better</td>
+                                        <td>Lauv</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="list-artwork">
+                                            <div class="artwork">
+                                                <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000282078677-wnv9pv-t500x500.jpg");'></span>
+                                            </div>
+                                        </td>
+                                        <td>In the end</td>
+                                        <td>Linkin Park</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="artwork">
+                                                <span src="https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg" class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                            </div>
+                                        </th>
+                                        <td class="td-nowrap">Young dumb and broke</td>
+                                        <td>Khalid</td>
+                                        <td></td>
+                                        <td>0:00</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- weekly chart -->
+
+                    <!-- recently-add -->
+                    <div id="recently-added" style="display: inherit;" class="recently-add">
+                        <div style="display: flex" class="px-2">
+                            <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
+                            <section class="w-100 list-more d-flex justify-content-end">
+                                <div>
+                                    <a>Show all</a>
+                                </div>
+                                <button class="material-icons">keyboard_arrow_left</button>
+                                <button class="material-icons">keyboard_arrow_right</button>
+                            </section>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li id="card" class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Sunflower</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Post MaLone</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Young dumb and broke</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Khalid</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>FRIENDS</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>I like me better</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>LAUV</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Happier</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Wake me up</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Avicii</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of recently-add -->
+
+                    <!-- trending -->
+                    <div id="trending" class="trending">
+
+                        <div style="display: flex" class="px-2">
+                            <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
+                            <section class="w-100 list-more d-flex justify-content-end">
+                                <div>
+                                    <a>show all</a>
+                                </div>
+                                <button class="material-icons">keyboard_arrow_left</button>
+                                <button class="material-icons">keyboard_arrow_right</button>
+                            </section>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li id="card" class="track-card p-1">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Sunflower</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Post MaLone</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Young dumb and broke</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Khalid</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>FRIENDS</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>I like me better</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>LAUV</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Happier</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Wake me up</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Avicii</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of trending -->
+                </div>
+                <!-- end of explore page -->
+
+                <!-- songs page -->
+                <div id="songs" class="px-2">
+                    <h1 class="list-title px-2 pt-2 w-100">Songs</h1>
+                    <br>
                     <div class="row">
                         <table class="table table-hover tab-nowrap col-12">
                             <thead>
                                 <tr class="col-12">
-                                    <th style="width: 60px;">#</th>
+                                    <th style="width: 60px;"></th>
                                     <th style="width: 40%;">Title</th>
                                     <th style="width: 20%;">Artist</th>
                                     <th style="width: 20%;">Album</th>
                                     <th style="width: 10%;"></th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr class="letter-header">
+                                    <th>#</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td>444th Air Base Hanger</td>
+                                    <td>Unknown Artist</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:00</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr class="letter-header">
+                                    <th>S</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -165,202 +496,7 @@
                         </table>
                     </div>
                 </div>
-                <!-- weekly chart -->
-
-                <!-- recently-add -->
-                <div id="recently-added" style="display: inherit;" class="recently-add">
-                    <div style="display: flex" class="px-2">
-                        <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
-                        <section class="w-100 list-more d-flex justify-content-end">
-                            <div>
-                                <a>Show all</a>
-                            </div>
-                            <button class="material-icons">keyboard_arrow_left</button>
-                            <button class="material-icons">keyboard_arrow_right</button>
-                        </section>
-                    </div>
-
-                    <ul style="overflow: scroll;" class="track-list mx-0 row">
-                        <li id="card" class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Sunflower</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Post MaLone</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Young dumb and broke</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Khalid</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>FRIENDS</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Marshmello</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>I like me better</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>LAUV</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Happier</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Marshmello</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Wake me up</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Avicii</p>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- end of recently-add -->
-
-                <!-- trending -->
-                <div id="trending" class="trending">
-                    
-                    <div style="display: flex" class="px-2">
-                        <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
-                        <section class="w-100 list-more d-flex justify-content-end">
-                            <div>
-                                <a>show all</a>
-                            </div>
-                            <button class="material-icons">keyboard_arrow_left</button>
-                            <button class="material-icons">keyboard_arrow_right</button>
-                        </section>
-                    </div>
-
-                    <ul style="overflow: scroll;" class="track-list mx-0 row">
-                        <li id="card" class="track-card p-1">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Sunflower</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Post MaLone</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Young dumb and broke</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Khalid</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>FRIENDS</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Marshmello</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>I like me better</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>LAUV</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Happier</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Marshmello</p>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="track-card p-2">
-                            <div class="artwork">
-                                <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
-                            </div>
-                            <div class="info">
-                                <a href="" class="title">
-                                    <p>Wake me up</p>
-                                </a>
-                                <a href="" class="artist">
-                                    <p>Avicii</p>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- end of trending -->
-
-    <!-- end of explore page -->
+                <!-- end of songs page -->
 
             </div>
         </div>
