@@ -6,26 +6,11 @@ $(document).ready(function () {
         });
     };
 
-    $(".track-card").clickToggle(
-        function () {
-            b.play();
-        },
-        function () {
-            b.pause();
-        });
-
     $("#toggle").click(function () {
         $("aside").toggleClass("aside");
         $("#content").toggleClass("ml-0 col-md-12 col-xl-12 col-lg-12");
         $("#search").toggleClass("ml-md-4")
     });
-
-    //menu selection
-    $("aside ul li a").click(function () {
-        $("aside ul li, .active-menu").removeClass("active-menu");
-        $(this).parent().addClass("active-menu");
-        $(this).addClass("active-menu");
-    })
 
     $("#menu-explore").click(function () {
         $("#songs").addClass("hide");
@@ -38,22 +23,57 @@ $(document).ready(function () {
         $("#explore").addClass("hide");
     })
 
-    //song selection
+    //menu selection
+    $("aside ul li a").click(function () {
+        $("aside ul li, .active-menu").removeClass("active-menu");
+        $(this).parent().addClass("active-menu");
+        $(this).addClass("active-menu");
+    })
+
+
+    //select song in card
+    $(".track-card").clickToggle(
+        function () {
+            b.play();
+        },
+        function () {
+            b.pause();
+        }
+
+    );
+
+    //song selection in card
+    $(".track-card").click(function() {
+        var song = {
+            title: $(this.children[1].children[0].children[0]).text(),
+            artist: $(this.children[1].children[1].children[0]).text(),
+            album: null,
+            src: $(this.children[0].children[0]).css("background-image"),
+        }
+                $(".play-artwork span").css({
+            "background-image": song.src
+        });
+        $(".play-info .info .title p").text(song.title);
+        $(".play-info .info .artist p").text(song.artist);
+    })
+
+    //song selection in list
     $(".list-songs table tbody tr").click(function () {
 
         $(".list-songs table tbody tr").removeClass("current-song");
         $(this).addClass("current-song");
-
         var song = {
-            title:$(this.children[1]).text(),
-            artist:$(this.children[2]).text(),
-            album:$(this.children[3]).text(),
-            src:$(this.children[0].children[0].children[0]).css("background-image"),
+            title: $(this.children[1]).text(),
+            artist: $(this.children[2]).text(),
+            album: $(this.children[3]).text(),
+            src: $(this.children[0].children[0].children[0]).css("background-image"),
         }
-        console.log(song.title);
-        $(".play-artwork span").css({"background-image":song.src});
-        document.firstElementBu
 
+        $(".play-artwork span").css({
+            "background-image": song.src
+        });
+        $(".play-info .info .title p").text(song.title);
+        $(".play-info .info .artist p").text(song.artist);
     })
 
 
