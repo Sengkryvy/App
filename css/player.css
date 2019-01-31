@@ -32,10 +32,9 @@
     }
 }
 
-
 #play i,
 #pause i {
-    font-size: 28px;
+    font-size: 24px;
     border-radius: 50%;
     border: 2px solid;
 }
