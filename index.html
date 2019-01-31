@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/player.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
 </head>
 
 <body>
@@ -20,17 +21,13 @@
         <bottom id="toggle"><i class="material-icons">menu</i></bottom>
         <!-- sidebar -->
         <aside class="col-md-3 col-lg-2 col-6 col-sm-4 h-100">
-            <div class="bread">Music</div>
+            <div id="bread" class="bread">Music</div>
             <ul class=".menu">
 
-                <!-- <li class="active-menu"><a class="row align-items-center" href="index.html"><i  id="hello" class="material-icons">explore</i>Explore</a></li>
-                <li><a class="row align-items-center" href="songs.html"><i class="material-icons">music_note</i>Songs</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">library_music </i>Albums</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li> -->
-                
                 <li><a id="menu-explore" class="row align-items-center active-menu" href="#"><i class="material-icons active-menu">explore</i>Explore</a></li>
                 <li><a id="menu-songs" class="row align-items-center" href="#"><i class="material-icons">music_note</i>Songs</a></li>
-                <li><a id="menu-albums" class="row align-items-center" href="#"><i class="material-icons">library_music </i>Albums</a></li>
+                <li><a id="menu-albums" class="row align-items-center" href="#"><i class="material-icons">library_music
+                        </i>Albums</a></li>
                 <li><a id="menu-artists" class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li>
                 <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li>
                 <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li>
@@ -49,10 +46,10 @@
             <!-- end of top navbar -->
 
             <!-- here the content -->
-            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
+            <div id="content" style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
 
                 <!-- explore page -->
-                <div id="explore">
+                <div id="explore" class="">
                     <!-- weekly chart -->
                     <div id="weekly-chart" class="px-2">
                         <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
@@ -68,7 +65,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/mp3%2FPost%20Malone%20Swae%20Lee%20-%20Sunflower%20(Spider-Man%20Into%20the%20Spider-Verse).mp3?alt=media&token=27973f3a-451c-4070-bce0-9647ecf6775f"
+                                        id="list1">
                                         <td scope="row" class="list-artwork">
                                             <div class="artwork">
                                                 <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
@@ -79,13 +77,13 @@
                                         <td></td>
                                         <td>0:00</td>
                                     </tr>
-                                    <tr>
+                                    <tr src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/mp3%2FYoung%20Dumb%20%20Broke%20%20Khalid%20%20Lyrics.mp3?alt=media&token=862389ba-6f03-409b-9645-81fd20d1852f">
                                         <th scope="row">
                                             <div class="artwork">
                                                 <span class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
                                             </div>
                                         </th>
-                                        <td class="td-nowrap">Yound dumb and broke</td>
+                                        <td class="td-nowrap">Young dumb and broke</td>
                                         <td>Khalid</td>
                                         <td></td>
                                         <td>0:00</td>
@@ -148,7 +146,8 @@
                                     <tr>
                                         <th scope="row">
                                             <div class="artwork">
-                                                <span src="https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg" class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                                <span src="https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg"
+                                                    class="no-border-radius" style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
                                             </div>
                                         </th>
                                         <td id="play-title" class="td-nowrap">Young dumb and broke</td>
@@ -177,7 +176,8 @@
                         </div>
 
                         <ul style="overflow: scroll;" class="track-list mx-0 row">
-                            <li id="card" class="track-card p-2">
+                            <li id="card" src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/mp3%2FPost%20Malone%20Swae%20Lee%20-%20Sunflower%20(Spider-Man%20Into%20the%20Spider-Verse).mp3?alt=media&token=27973f3a-451c-4070-bce0-9647ecf6775f"
+                                class="track-card p-2">
                                 <div class="artwork">
                                     <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
                                 </div>
@@ -190,7 +190,7 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="track-card p-2">
+                            <li class="track-card p-2" src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/mp3%2FYoung%20Dumb%20%20Broke%20%20Khalid%20%20Lyrics.mp3?alt=media&token=862389ba-6f03-409b-9645-81fd20d1852f">
                                 <div class="artwork">
                                     <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
                                 </div>
@@ -359,10 +359,10 @@
                 <!-- end of explore page -->
 
                 <!-- songs page -->
-                <div id="songs" class="px-2">
+                <div id="songs" class="px-2 hide songs">
                     <h1 class="list-title px-2 pt-2 w-100">Songs</h1>
                     <br>
-                    <div class="row">
+                    <div class="row list-songs">
                         <table class="table table-hover tab-nowrap col-12">
                             <thead>
                                 <tr class="col-12">
@@ -504,6 +504,428 @@
                 </div>
                 <!-- end of songs page -->
 
+                <!-- album page -->
+                <div id="albums" class="container-fluid hide">
+                    <div id="recently-added" style="display: inherit;" class="recently-add">
+                        <div style="display: flex" class="px-2">
+                            <h1 class="list-title px-2 pt-2 w-100">Albums</h1>
+                        </div>
+
+                        <!-- A -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">A</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <a href="albums-info.html"><span style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span></a>
+                                </div>
+                                <div class="info">
+                                    <a href="albums-info.html" class="title" title="Ace Combat 7 Original Sound Tracks (2019)">
+                                        <p>Ace Combat 7 Original Sound Tracks (2019)</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Keiki Kobayashi</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- F -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">F</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000359430471-6jd8ty-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>FRIENDS</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- H-->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">H</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Marshmello_and_Bastille_Happier.png/220px-Marshmello_and_Bastille_Happier.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Happier</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- I -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">I</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000239465971-hnu0g4-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>I like me better</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>LAUV</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- S -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">S</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li id="card" class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Sunflower</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Post MaLone</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- W -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">W</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Wake me up</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Avicii</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Y -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">Y</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Young dumb and broke</p>
+                                    </a>
+                                    <a href="" class="artist">
+                                        <p>Khalid</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- end of album page -->
+
+                <!-- Album-info Page -->
+                <div id="#album-info" class="px-2 hide">
+                    <!-- Album's Title -->
+                    <h1 class="list-title px-2 pt-2 w-100">Ace Combat 7 Original Sound Tracks (2019)</h1>
+                    <br>
+                    <div class="row">
+                        <table class="table table-hover tab-nowrap col-12">
+                            <thead>
+                                <tr class="col-12">
+                                    <th style="width: 60px"></th>
+                                    <th style="width: 5%; text-align: center">#</th>
+                                    <th style="width: 40%;">Title</th>
+                                    <th style="width: 20%;">Artist</th>
+                                    <th style="width: 20%;">Album</th>
+                                    <th style="width: 10%;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center"></td>
+                                    <td>Skies Unknown</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:44</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">1.</td>
+                                    <td>Main Menu</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">2.</td>
+                                    <td>IUN Briefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:05</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">3.</td>
+                                    <td>Fort Grays Air Base Hanger</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:33</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">4.</td>
+                                    <td>Charge Assualt</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:51</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">5.</td>
+                                    <td>Eastern Wind</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">6.</td>
+                                    <td>Unmanned Craft</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">7.</td>
+                                    <td>Dual Wielder</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:31</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">8.</td>
+                                    <td>Two-Pronged Strategy</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>6:32</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">9.</td>
+                                    <td>Tail Man</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>5:16</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">10.</td>
+                                    <td>Gunther Peninsula</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:23</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">11.</td>
+                                    <td>Rescue</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:36</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">12.</td>
+                                    <td>Mother Goose One</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:21</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">13.</td>
+                                    <td>IUN Debriefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:31</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">14.</td>
+                                    <td>444th Air Base Briefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:33</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">15.</td>
+                                    <td>444th Air Base Hanger</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:00</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">16.</td>
+                                    <td>444</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:19</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">17.</td>
+                                    <td>Long Day</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:32</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">18.</td>
+                                    <td>Yinshi Valley</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:10</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">19.</td>
+                                    <td>First Contact</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End of Song Page -->
+
             </div>
         </div>
         <!-- end of content -->
@@ -511,11 +933,13 @@
         <!-- bottom navbar -->
         <nav class="navbar col-12 nav-bottom">
             <div class="player-container row">
-                <div class="play-info d-flex col-3">
-                    <div class="play-artwork">
+
+                <!-- artwork and now playing -->
+                <div class="play-info d-flex col-3 col-md-3 my-auto">
+                    <div class="play-artwork p-0 m-0">
                         <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
                     </div>
-                    <div class="info my-auto px-2">
+                    <div class="info pl-1 pr-0 m-0 my-auto px-md-2 col-12 col-md-8">
                         <a href="" class="title">
                             <p>Sunflower</p>
                         </a>
@@ -525,23 +949,30 @@
                     </div>
                 </div>
 
-                <div class="play-progress col-6 col-md-7 my-auto">
-                    <div class="control">
-                        <button class="px-3" id="prev"><i class="material-icons">skip_previous</i></button>
-                        <button class="px-1" id="play"><i class="material-icons">play_arrow</i></button>
-                        <button class="px-3" id="next"><i class="material-icons">skip_next</i></button>
+                <!-- control and progress -->
+                <div class="play-progress col-7 col-md-7 px-0">
+                    <div class="control col-12">
+                        <button class="px-md-2" id="prev"><i class="material-icons">skip_previous</i></button>
+                        <button class="px-sm-1 play" id="play"><i class="material-icons">play_arrow</i></button>
+                        <button class="px-md-2" id="next"><i class="material-icons">skip_next</i></button>
                     </div>
-                    <div style="padding: 7px 5px 0 5px;">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="row text-center">
+                        <div class="col-2 col-lg-1 duration">0:00</div>
+                        <div class="col-8 col-lg-10 my-auto">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                         </div>
+                        <div id="duration" class="duration col-1 col-lg-1 mx-0 px-0">0:00</div>
                     </div>
                 </div>
-                <div class="play-control col-2 my-auto d-flex">
-                    <button><i class="material-icons">volume_up</i></button>
-                    <div class="col-10 m-0 p-0 my-auto">
-                        <div class="progress">
+
+                <!-- volume -->
+                <div id="volume" class="play-control col-2 col-md-2 d-flex m-auto">
+                    <button id="volume-icon"><i class="material-icons">volume_up</i></button>
+                    <div id="volume-bar" class="col-7 col-md-9 my-auto">
+                        <div  class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
@@ -555,6 +986,18 @@
     </div>
 
 
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBEMSE2sV8hwILNdqp4AhPNcoiM9Qbm63k",
+            authDomain: "musicapp-4582e.firebaseapp.com",
+            databaseURL: "https://musicapp-4582e.firebaseio.com",
+            projectId: "musicapp-4582e",
+            storageBucket: "musicapp-4582e.appspot.com",
+            messagingSenderId: "1039434768076"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
