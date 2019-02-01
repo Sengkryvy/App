@@ -45,10 +45,6 @@
     height: 100%;
 }
 
-.progress {
-    /* background-color: aquamarine; */
-}
-
 .play-progress .control,
 .play-control .control {
     text-align: center;

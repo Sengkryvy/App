@@ -59,32 +59,25 @@ $(document).ready(function () {
     //go to next song
     $("#next").click(function () {
         var section = current.parent().parent().parent();
+        var temp;
         //control for weekly chart list
         if (section.parent().is('#weekly-chart')) {
             if (current.is(":last-child")) {
-                $(current).removeClass("current-song");
+                current.removeClass("current-song");
                 current = current.parent().children(':first-child');
             } else {
                 current = current.next();
-                $(".current-song").removeClass("current-song").next().addClass("current-song");                
-            }
-        } else { // control for songs list
-            console.log(current[0]);
-            console.log("songs")
-            if (current.is(":last-child")) {
-                console.log("last");
-                if (current.parent().next().is("thead")) {
-                    $(current).removeClass("current-song")
-                    current = current.parent().next().next().children();
-                } else {
-                    current.removeClass('current-song');
-                    current = current.parent().children(':first-child');
-                }
-                $(current).parent().children(':first-child').addClass("current-song");
-
-            } else {
-                current = current.next();
                 $(".current-song").removeClass("current-song").next().addClass("current-song");
+            }
+        } else { //control for song list
+            if (current.is(":last-child")) {
+                current.removeClass("current-song");
+                current = current.parent().next().next().children(':first-child');
+                current.addClass("current-song");
+            } else {
+                current.removeClass("current-song");
+                current = current.next();
+                current.addClass("current-song");
             }
         }
 
@@ -95,22 +88,30 @@ $(document).ready(function () {
 
     //go to prev song
     $("#prev").click(function () {
-
-        if (current.is(":first-child")) {
-            if (current.parent().next().is("thead")) {
-                $(current).removeClass("current-song")
-                current = current.parent().prev().prev().children();
-            } else if (current.parent().is(":nth-child(3)")) {
-
-            } else {
-                current.removeClass('current-song');
+        var section = current.parent().parent().parent();
+        var temp;
+        //control for weekly chart list
+        if (section.parent().is('#weekly-chart')) {
+            if (current.is(":first-child")) {
+                current.removeClass("current-song");
                 current = current.parent().children(':last-child');
+                current.addClass("current-song");
+            } else {
+                current = current.prev();
+                $(".current-song").removeClass("current-song").prev().addClass("current-song");
             }
-            $(current).parent().children(':last-child').addClass("current-song");
-        } else {
-            current = current.prev()
-            $(".current-song").removeClass("current-song").prev().addClass("current-song");
+        } else { //control for song list
+            if (current.is(":first-child")) {
+                current.removeClass("current-song");
+                current = current.parent().prev().prev().children(':last-child');
+                current.addClass("current-song");
+            } else {
+                current.removeClass("current-song");
+                current = current.prev();
+                current.addClass("current-song");
+            }
         }
+
         setSongInList(current);
         playSong();
         setPlayingInfo();
