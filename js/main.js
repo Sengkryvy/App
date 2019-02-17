@@ -25,7 +25,6 @@ $(document).ready(function () {
     $("#menu-explore").click(function () {
         $(".app #content").find(">div").not(".app .content #explore").addClass("hide");
         $("#explore").removeClass("hide");
-        $("#play").parent().removeClass().addClass("explore");
     })
     $("#menu-songs").click(function () {
         $(".app #content").find(">div").not(".app .content #songs").addClass("hide");
@@ -42,6 +41,38 @@ $(document).ready(function () {
     $("#sample-album").click(function () {
         $(".app #content").find(">div").not(".app .content #album-info").addClass("hide");
         $("#album-info").removeClass("hide");
+    });
+    $("#american_teen").click(function () {
+        $(".app #content").find(">div").not(".app .content #american-teen").addClass("hide");
+        $("#american-teen").removeClass("hide");
+    });
+    $("#spiderman_into_the_spider_verse").click(function () {
+        $(".app #content").find(">div").not(".app .content #spiderman-into-the-spider-verse").addClass("hide");
+        $("#spiderman-into-the-spider-verse").removeClass("hide");
+    });
+    $("#live_in_texas").click(function () {
+        $(".app #content").find(">div").not(".app .content #live-in-texas").addClass("hide");
+        $("#live-in-texas").removeClass("hide");
+    });
+    $("#artist-khalid").click(function () {
+        $(".app #content").find(">div").not(".app .content #khalid").addClass("hide");
+        $("#khalid").removeClass("hide");
+    });
+    $("#artist-keiki-kobayashi").click(function () {
+        $(".app #content").find(">div").not(".app .content #album-info").addClass("hide");
+        $("#album-info").removeClass("hide");
+    });
+    $("#artist-marshmello").click(function () {
+        $(".app #content").find(">div").not(".app .content #marshmello").addClass("hide");
+        $("#marshmello").removeClass("hide");
+    });
+    $("#artist-post-malone").click(function () {
+        $(".app #content").find(">div").not(".app .content #post-malone").addClass("hide");
+        $("#post-malone").removeClass("hide");
+    });
+    $("#artist-lauv").click(function () {
+        $(".app #content").find(">div").not(".app .content #lauv").addClass("hide");
+        $("#lauv").removeClass("hide");
     });
 
 });

@@ -23,7 +23,7 @@ $(document).ready(function () {
     };
 
     // //song selection in card
-    $(".track-card").click(function () {
+    $(".track-card.song").click(function () {
         current = $(this);
         //set info to object song
         setSongInCard(current);
@@ -164,8 +164,10 @@ function setPlayingInfo() {
         };
         var minutes = Math.floor(song.duration / 60);
         var seconds = Math.ceil(song.duration - minutes * 60);
-        $('#duration').text(minutes + ":" + seconds);
-
+        if (seconds > 9)
+            $('#duration').text(minutes + ":" + seconds);
+        else
+            $('#duration').text(minutes + ":0" + seconds);
         AudioTrack();
 
         // track progress timer
