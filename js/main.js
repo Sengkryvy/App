@@ -39,5 +39,9 @@ $(document).ready(function () {
         $(".app #content").find(">div").not(".app .content #artists").addClass("hide");
         $("#artists").removeClass("hide");
     })
+    $("#sample-album").click(function () {
+        $(".app #content").find(">div").not(".app .content #album-info").addClass("hide");
+        $("#album-info").removeClass("hide");
+    });
 
 });
