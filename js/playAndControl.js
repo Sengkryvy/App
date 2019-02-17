@@ -164,8 +164,10 @@ function setPlayingInfo() {
         };
         var minutes = Math.floor(song.duration / 60);
         var seconds = Math.ceil(song.duration - minutes * 60);
-        $('#duration').text(minutes + ":" + seconds);
-
+        if (seconds > 9)
+            $('#duration').text(minutes + ":" + seconds);
+        else
+            $('#duration').text(minutes + ":0" + seconds);
         AudioTrack();
 
         // track progress timer
