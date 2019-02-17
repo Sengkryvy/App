@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var prevSong = new Audio;
 var playingSong = null;
 var song;
@@ -6,6 +7,8 @@ var startTime = 0 ,startMinutes = 0, startSeconds = 0;
 var isPaused = false; 
 
 
+=======
+>>>>>>> parent of cc47b0e... Update main.js
 $(document).ready(function () {
     jQuery.fn.clickToggle = function (a, b) {
         var ab = [b, a];
@@ -48,6 +51,7 @@ $(document).ready(function () {
         $("#artists").removeClass("hide");
     })
 
+<<<<<<< HEAD
 
 
     
@@ -291,3 +295,6 @@ function playSong() {
 }
 
 function nextSong() {}
+=======
+});
+>>>>>>> parent of cc47b0e... Update main.js
