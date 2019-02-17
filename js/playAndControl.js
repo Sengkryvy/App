@@ -23,7 +23,7 @@ $(document).ready(function () {
     };
 
     // //song selection in card
-    $(".track-card").click(function () {
+    $(".track-card.song").click(function () {
         current = $(this);
         //set info to object song
         setSongInCard(current);
