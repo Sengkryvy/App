@@ -3,6 +3,7 @@ var playingSong = null;
 var song;
 var add = 0;
 var current;
+var volume;
 
 var i = 0;
 var startTime = 0,
@@ -21,6 +22,17 @@ $(document).ready(function () {
             ab[this._tog ^= 1].call(this);
         });
     };
+
+    // $('input[type=range]').on('input', function () {
+    //     $(this).trigger('change');
+    // });
+
+    $(document).on('input', '#volume-input', function() {
+        volume = $("#volume-input").val();
+        console.log(volume);
+        playingSong.volume = volume/100;
+    });
+
 
     // //song selection in card
     $(".track-card.song").click(function () {
@@ -96,6 +108,7 @@ $(document).ready(function () {
         setSongInList(current);
         playSong();
         setPlayingInfo();
+        
     })
 
     //go to prev song
@@ -172,11 +185,13 @@ function setPlayingInfo() {
 
         // track progress timer
         trackProgressTimer = setInterval(function () {
+            volume = $("#volume").val();
+            console.log(volume);
+            song.volume = volume/100;
             var endMinutes = Math.floor(song.duration / 60);
             var endSeconds = Math.ceil(song.duration - minutes * 60);
             // startMinutes = startSeconds = 0
             if (!isPaused) {
-
                 startSeconds = startSeconds + 1; // incrementation
                 if (startSeconds < 10) {
                     $('#startDuration').text(startMinutes + ":0" + startSeconds);

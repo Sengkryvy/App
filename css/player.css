@@ -1,7 +1,7 @@
 @media(max-width:768px) {
     .play-info .play-artwork * {
-        display: none!important;
-        width: 0!important;
+        display: none !important;
+        width: 0 !important;
     }
 
     .duration {
@@ -13,17 +13,18 @@
     }
 
     #volume {
-        margin-left: -10px!important;
+        margin-left: -10px !important;
     }
-    
+
     #volume-bar {
         padding: 0;
     }
-    #volume-icon i{
+
+    #volume-icon i {
         margin: 0;
         padding-left: 0;
     }
-    
+
 }
 
 @media(min-width:769px) {
@@ -136,3 +137,24 @@
 .progress {
     height: 4px;
 }
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* border-radius: 26px; */
+    height: 4px;
+    /* width: 170px; */
+    /* background-color: rgb(74, 123, 197); */
+  }
+  
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    background: #fff;
+    /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6); */
+  }
