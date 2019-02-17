@@ -4,12 +4,6 @@ var song;
 var add = 0;
 var current;
 
-var i = 0;
-var startTime = 0,
-    startMinutes = 0,
-    startSeconds = 0;
-var isPaused = false;
-
 
 $(document).ready(function () {
     jQuery.fn.clickToggle = function (a, b) {
@@ -51,20 +45,14 @@ $(document).ready(function () {
     })
 
     // pause and play song
-    $("#play, #pause").click(function (e) {
+    $("#play, #pause").click(function () {
         var playingStatus = $(".play-progress .control #play i");
         if (playingStatus.text() == "play_arrow") {
             playingStatus.text("pause");
             playingSong.play();
-
-            e.preventDefault();
-            isPaused = false;
         } else {
             playingStatus.text("play_arrow");
             playingSong.pause();
-
-            e.preventDefault();
-            isPaused = true;
         }
     })
 
@@ -128,61 +116,6 @@ $(document).ready(function () {
         playSong();
         setPlayingInfo();
     })
-
-    // track progress bar
-    var onePercentDuration = (song.duration / 100);
-    var endTime = song.duration;
-    var trackProgressBar = setInterval(function () {
-        if (!isPaused) {
-            $("#song-progress").css("width", i + "%");
-            i++; // incrementation
-            startTime = startTime + onePercentDuration;
-            // reset progress bar
-            if (i == 101) {
-                clearInterval(trackProgressBar);
-                i = 0;
-                $("#song-progress").css("width", i + "%");
-            }
-        }
-        // console.log(i);
-    }, onePercentDuration * 1000)
-
-    // track progress timer
-    var trackProgressTimer = setInterval(function () {
-        var endMinutes = Math.floor(song.duration / 60);
-        var endSeconds = Math.ceil(song.duration - minutes * 60);
-        // startMinutes = startSeconds = 0
-        if (!isPaused) {
-            startSeconds = startSeconds + 1; // incrementation
-            if (startSeconds < 10) {
-                $('#startDuration').text(startMinutes + ":0" + startSeconds);
-            } else {
-                if (startSeconds == 60) {
-                    startMinutes = startMinutes + 1;
-                    startSeconds = 0;
-                    $('#startDuration').text(startMinutes + ":" + startSeconds);
-                } else {
-                    $('#startDuration').text(startMinutes + ":" + startSeconds);
-                }
-            }
-            // console.log(startMinutes, startSeconds);
-            if (startMinutes == endMinutes && startSeconds == endSeconds) {
-                clearInterval(trackProgressTimer);
-                startMinutes = 0, startSeconds = 0;
-                $('#startDuration').text(startMinutes + ":" + startSeconds);
-            }
-        }
-    }, 1000)
-
-
-    // seeking (click on progress bar to go to a position)
-    var isSeeking = false;
-    var progressPosition = $("#song-progress").css("width");
-    // console.log(progressPosition);
-    $("#song-progress").click(function (e) {
-        var position = e.pageX - this.offsetLeft;
-        console.log(position);
-    });
 
 
 
