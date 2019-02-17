@@ -29,8 +29,8 @@
                 <li><a id="menu-albums" class="row align-items-center" href="#"><i class="material-icons">library_music
                         </i>Albums</a></li>
                 <li><a id="menu-artists" class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li>
+                <!-- <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li> -->
+                <!-- <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li> -->
             </ul>
         </aside>
         <!-- end of sidebar -->
@@ -38,7 +38,8 @@
         <!-- top navbar -->
         <nav id="nav-top" class="navbar col-12 nav-top">
             <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">
-                <input id="search-input" type="text" placeholder="Search..">
+                <!-- <input id="search-input" type="text" placeholder="Search.."> -->
+                <h1 style="margin-top: -7px;" class="text-center app-title">Music App</h1>
             </div>
         </nav>
         <!-- end of top navbar -->
@@ -46,14 +47,13 @@
 
         <!-- here the content -->
         <div class="app">
-
             <div id="content" style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
 
                 <!-- explore page -->
                 <div id="explore" class="">
                     <!-- weekly chart -->
                     <div id="weekly-chart" class="px-2">
-                        <h1 class="list-title px-2 pt-2 w-100">Weekly Charts</h1>
+                        <h1 class="list-title px-2 py-2 w-100">Weekly Charts</h1>
                         <div class="row list-songs">
                             <table class="table table-hover tab-nowrap col-12">
                                 <thead>
@@ -155,16 +155,16 @@
                     <div id="recently-added" style="display: inherit;" class="recently-add">
                         <div style="display: flex" class="px-2">
                             <h1 class="list-title px-2 pt-2 w-100">Recently Added</h1>
-                            <section class="w-100 list-more d-flex justify-content-end">
+                            <!-- <section class="w-100 list-more d-flex justify-content-end">
                                 <div>
                                     <a>Show all</a>
                                 </div>
                                 <button class="material-icons">keyboard_arrow_left</button>
                                 <button class="material-icons">keyboard_arrow_right</button>
-                            </section>
+                            </section> -->
                         </div>
 
-                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                        <ul style="overflow: scroll;" class="track-list ml-1 row">
                             <li id="card" src="https://firebasestorage.googleapis.com/v0/b/musicapp-4582e.appspot.com/o/mp3%2FPost%20Malone%20Swae%20Lee%20-%20Sunflower%20(Spider-Man%20Into%20the%20Spider-Verse).mp3?alt=media&token=27973f3a-451c-4070-bce0-9647ecf6775f"
                                 class="track-card p-2">
                                 <div class="artwork">
@@ -253,16 +253,16 @@
 
                         <div style="display: flex" class="px-2">
                             <h1 class="list-title px-2 pt-2 w-100">Trending</h1>
-                            <section class="w-100 list-more d-flex justify-content-end">
+                            <!-- <section class="w-100 list-more d-flex justify-content-end">
                                 <div>
                                     <a>show all</a>
                                 </div>
                                 <button class="material-icons">keyboard_arrow_left</button>
                                 <button class="material-icons">keyboard_arrow_right</button>
-                            </section>
+                            </section> -->
                         </div>
 
-                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                        <ul style="overflow: scroll;" class="track-list ml-1 row">
                             <li id="card" class="track-card p-1">
                                 <div class="artwork">
                                     <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
@@ -960,6 +960,122 @@
                     </div>
                 </div>
                 <!-- End of Song Page -->
+
+                <!-- artists page -->
+                <div id="artists" class="container-fluid hide">
+                    <div id="recently-added" style="display: inherit;" class="recently-add">
+                        <div style="display: flex" class="px-2">
+                            <h1 class="list-title px-2 pt-2 w-100">Artist</h1>
+                        </div>
+
+                        <!-- A -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">A</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Avicii_Wake_Me_Up_Official_Single_Cover.png/220px-Avicii_Wake_Me_Up_Official_Single_Cover.png");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Avivii</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- K -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">K</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <a href="albums-info.html"><span style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span></a>
+                                </div>
+                                <div class="info">
+                                    <a href="albums-info.html" class="title" title="Ace Combat 7 Original Sound Tracks (2019)">
+                                        <p>Keiki Kobayashi</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li href="artist.html" class="track-card p-2">
+                                <div class="artwork">
+                                    <a href="artist.html"><span style='background-image: url("https://i1.sndcdn.com/artworks-000224127351-4m2rkf-t500x500.jpg");'></span>
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="artist.html" class="title">
+                                        <p>Khalid</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- L -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">I</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://s3.us-east-2.amazonaws.com/s3.mix1051fm.com/styles/delta__775x515/s3/lauv%20775x515.jpg?itok=NzNbus6E&c=4ee32dfc3c61cdac200ac5591d3e369a");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>LAUV</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- M -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">M</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://thumbor.forbes.com/thumbor/0x0/smart/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5be1e2a3a7ea437059163919%2F960x0.jpg%3FcropX1%3D0%26cropX2%3D1999%26cropY1%3D0%26cropY2%3D1999");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Marshmello</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+
+                        <!-- P -->
+                        <div style="display: flex" class="px-2">
+                            <h2 class="list-title px-3 pt-3 w-100">S</h2>
+                        </div>
+
+                        <ul style="overflow: scroll;" class="track-list mx-0 row">
+                            <li id="card" class="track-card p-2">
+                                <div class="artwork">
+                                    <span style='background-image: url("https://i1.sndcdn.com/artworks-85AaCd8d3JAv-0-t500x500.jpg");'></span>
+                                </div>
+                                <div class="info">
+                                    <a href="" class="title">
+                                        <p>Post Malone</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+                <!-- end of artists page -->
 
             </div>
         </div>

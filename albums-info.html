@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/player.css">
-    <link rel="stylesheet" href="css/songs.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
 </head>
 
 <body>
-    <div class="row app-wrapper hide">
+    <div class="row app-wrapper">
 
         <bottom id="toggle"><i class="material-icons">menu</i></bottom>
 
@@ -25,11 +25,12 @@
             <div class="bread">Music</div>
             <ul class="link">
                 <li><a class="row align-items-center" href="index.html"><i class="material-icons">explore</i>Explore</a></li>
-                <li><a class="row align-items-center" href="songs.html"><i class="material-icons">music_note</i>Songs</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">library_music </i>Albums</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">explore</i>Artists</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li>
-                <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li>
+                <li><a class="row align-items-center" href="index.html"><i class="material-icons">music_note</i>Songs</a></li>
+                <li class="active-menu"><a class="row align-items-center active-menu" href="index.html"><i class="material-icons">library_music
+                        </i>Albums</a></li>
+                <li><a class="row align-items-center" href="index.html"><i class="material-icons">explore</i>Artists</a></li>
+                <!-- <li><a class="row align-items-center" href="#"><i class="material-icons" style="max-width: 44px;">star_rate</i>Trending</a></li> -->
+                <!-- <li><a class="row align-items-center" href="#"><i class="material-icons">favorite</i>Liked</a></li> -->
             </ul>
         </aside>
         <!-- end of sidebar -->
@@ -37,283 +38,283 @@
         <div class="app">
 
             <!-- top navbar -->
-            <nav id="home" class="navbar col-12 nav-top">
+            <nav id="nav-top" class="navbar col-12 nav-top">
                 <div id="search" class="col-md-9 offset-md-3 col-lg-10 offset-lg-2 col-12 offset-1">
-                    <input id="search-input" type="text" placeholder="Search..">
+                    <!-- <input id="search-input" type="text" placeholder="Search.."> -->
+                    <h1 style="margin-top: -7px;" class="text-center app-title">Music App</h1>
                 </div>
             </nav>
             <!-- end of top navbar -->
 
             <!-- here the content -->
-            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content"
-                class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
-    
-    <!-- Album-info Page -->
+            <div style="overflow: auto; margin-bottom: 75px; padding-bottom: 75px;" id="content" class="content p-3 col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-12 p-0">
 
-    <div class="px-2">
-        <!-- Album's Title -->
-        <h1 class="list-title px-2 pt-2 w-100">Ace Combat 7 Original Sound Tracks (2019)</h1> 
-        <br>
-        <div class="row">
-            <table class="table table-hover tab-nowrap col-12">
-                <thead>
-                    <tr class="col-12">
-                        <th style="width: 60px"></th>
-                        <th style="width: 5%; text-align: center">#</th>
-                        <th style="width: 40%;">Title</th>
-                        <th style="width: 20%;">Artist</th>
-                        <th style="width: 20%;">Album</th>
-                        <th style="width: 10%;"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center"></td>
-                        <td>Skies Unknown</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>2:44</td>
-                    </tr>
-                    <tr>                            
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">1.</td>
-                        <td>Main Menu</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>1:59</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">2.</td>
-                        <td>IUN Briefing</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>2:05</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">3.</td>
-                        <td>Fort Grays Air Base Hanger</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>2:33</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">4.</td>
-                        <td>Charge Assualt</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>2:51</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">5.</td>
-                        <td>Eastern Wind</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>4:59</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">6.</td>
-                        <td>Unmanned Craft</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>4:59</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">7.</td>
-                        <td>Dual Wielder</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:31</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">8.</td>
-                        <td>Two-Pronged Strategy</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>6:32</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">9.</td>
-                        <td>Tail Man</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>5:16</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">10.</td>
-                        <td>Gunther Peninsula</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:23</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">11.</td>
-                        <td>Rescue</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:36</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">12.</td>
-                        <td>Mother Goose One</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:21</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">13.</td>
-                        <td>IUN Debriefing</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>1:31</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">14.</td>
-                        <td>444th Air Base Briefing</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>1:33</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">15.</td>
-                        <td>444th Air Base Hanger</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>2:00</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">16.</td>
-                        <td>444</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>4:19</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">17.</td>
-                        <td>Long Day</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>4:32</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">18.</td>
-                        <td>Yinshi Valley</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:10</td>
-                    </tr>
-                    <tr>
-                        <td scope="row" class="list-artwork">
-                            <div class="artwork">
-                                <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
-                            </div>
-                        </td>
-                        <td style="text-align: center">19.</td>
-                        <td>First Contact</td>
-                        <td>Keiki Kobayashi</td>
-                        <td>Ace Combat 7 Original Sound Tracks (2019)</td>
-                        <td>3:12</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+                <!-- Album-info Page -->
 
-    <!-- End of Song Page -->
-        
+                <div class="px-2">
+                    <!-- Album's Title -->
+                    <h1 class="list-title px-2 pt-2 w-100">Ace Combat 7 Original Sound Tracks (2019)</h1>
+                    <br>
+                    <div class="row">
+                        <table class="table table-hover tab-nowrap col-12">
+                            <thead>
+                                <tr class="col-12">
+                                    <th style="width: 60px"></th>
+                                    <th style="width: 5%; text-align: center">#</th>
+                                    <th style="width: 40%;">Title</th>
+                                    <th style="width: 20%;">Artist</th>
+                                    <th style="width: 20%;">Album</th>
+                                    <th style="width: 10%;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center"></td>
+                                    <td>Skies Unknown</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:44</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">1.</td>
+                                    <td>Main Menu</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">2.</td>
+                                    <td>IUN Briefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:05</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">3.</td>
+                                    <td>Fort Grays Air Base Hanger</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:33</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">4.</td>
+                                    <td>Charge Assualt</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:51</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">5.</td>
+                                    <td>Eastern Wind</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">6.</td>
+                                    <td>Unmanned Craft</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:59</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">7.</td>
+                                    <td>Dual Wielder</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:31</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">8.</td>
+                                    <td>Two-Pronged Strategy</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>6:32</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">9.</td>
+                                    <td>Tail Man</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>5:16</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">10.</td>
+                                    <td>Gunther Peninsula</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:23</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">11.</td>
+                                    <td>Rescue</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:36</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">12.</td>
+                                    <td>Mother Goose One</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:21</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">13.</td>
+                                    <td>IUN Debriefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:31</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">14.</td>
+                                    <td>444th Air Base Briefing</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>1:33</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">15.</td>
+                                    <td>444th Air Base Hanger</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>2:00</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">16.</td>
+                                    <td>444</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:19</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">17.</td>
+                                    <td>Long Day</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>4:32</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">18.</td>
+                                    <td>Yinshi Valley</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:10</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="list-artwork">
+                                        <div class="artwork">
+                                            <span class="no-border-radius" style='background-image: url("https://i.imgur.com/5u6JeKZ.png");'></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center">19.</td>
+                                    <td>First Contact</td>
+                                    <td>Keiki Kobayashi</td>
+                                    <td>Ace Combat 7 Original Sound Tracks (2019)</td>
+                                    <td>3:12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- End of Song Page -->
+
 
             </div>
         </div>

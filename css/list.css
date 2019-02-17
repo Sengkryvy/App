@@ -16,6 +16,10 @@
 
 }   
 
+h1.list-title {
+    font-size: 2rem;
+}
+
 .list-more * {
     background: transparent;
     color: #c2c2c2;
@@ -49,14 +53,13 @@
 
 .track-card {
     position: relative;
-    /* box-shadow:0px 0px 50px #313131;  */
     width: 16%;
     block-size: 10%;
     margin: 7px 0;
 }
 
 .track-card .info {
-    background-color: #112b27;
+    background-color: #0000003d;
     border-radius: 0 0 5px 5px;
     padding: 5px 10px;
     margin: 0;
