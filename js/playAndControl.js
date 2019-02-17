@@ -4,6 +4,15 @@ var song;
 var add = 0;
 var current;
 
+var i = 0;
+var startTime = 0,
+    startMinutes = 0,
+    startSeconds = 0;
+var isPaused = false;
+var trackProgressTimer = null;
+var trackProgressBar = null;
+
+
 
 $(document).ready(function () {
     jQuery.fn.clickToggle = function (a, b) {
@@ -13,24 +22,23 @@ $(document).ready(function () {
         });
     };
 
-    //song selection in card
+    // //song selection in card
     $(".track-card").click(function () {
         current = $(this);
-
         //set info to object song
-        setSongInCard();
+        setSongInCard(current);
 
         playSong();
 
         setPlayingInfo();
     })
 
+
     //song selection in list
     $(".list-songs table tbody tr").click(function () {
 
         // get and play song
-        // add += 1;
-        current = $(this)
+        current = $(this);
 
         //set info to object song
         setSongInList(current);
@@ -45,14 +53,18 @@ $(document).ready(function () {
     })
 
     // pause and play song
-    $("#play, #pause").click(function () {
+    $("#play, #pause").click(function (e) {
         var playingStatus = $(".play-progress .control #play i");
         if (playingStatus.text() == "play_arrow") {
             playingStatus.text("pause");
             playingSong.play();
+            e.preventDefault();
+            isPaused = false;
         } else {
             playingStatus.text("play_arrow");
             playingSong.pause();
+            e.preventDefault();
+            isPaused = true;
         }
     })
 
@@ -121,14 +133,14 @@ $(document).ready(function () {
 
 })
 
-function setSongInCard() {
+function setSongInCard(current) {
     song = {
-        title: $(current.children[1].children[0].children[0]).text(),
-        artist: $(current.children[1].children[1].children[0]).text(),
+        title: current.children(":nth-child(2)").children(':nth-child(1)').children(':nth-child(1)').text(),
+        artist: current.children(":nth-child(2)").children(':nth-child(2)').children(':nth-child(1)').text(),
         album: null,
         duration: 0,
-        src: $(current).attr("src"),
-        cover: $(current.children[0].children[0]).css("background-image"),
+        src: current.attr("src"),
+        cover: current.children(":nth-child(1)").children(":nth-child(1)").css("background-image"),
     };
 }
 
@@ -153,6 +165,37 @@ function setPlayingInfo() {
         var minutes = Math.floor(song.duration / 60);
         var seconds = Math.ceil(song.duration - minutes * 60);
         $('#duration').text(minutes + ":" + seconds);
+
+        AudioTrack();
+
+        // track progress timer
+        trackProgressTimer = setInterval(function () {
+            var endMinutes = Math.floor(song.duration / 60);
+            var endSeconds = Math.ceil(song.duration - minutes * 60);
+            // startMinutes = startSeconds = 0
+            if (!isPaused) {
+
+                startSeconds = startSeconds + 1; // incrementation
+                if (startSeconds < 10) {
+                    $('#startDuration').text(startMinutes + ":0" + startSeconds);
+                } else {
+                    if (startSeconds == 60) {
+                        startMinutes = startMinutes + 1;
+                        startSeconds = 0;
+                        $('#startDuration').text(startMinutes + ":" + startSeconds);
+                    } else {
+                        $('#startDuration').text(startMinutes + ":" + startSeconds);
+                    }
+                }
+                // console.log(startMinutes, startSeconds);
+                if (startMinutes == endMinutes && startSeconds == endSeconds) {
+                    clearInterval(trackProgressTimer);
+                    startMinutes = 0, startSeconds = 0;
+                    $('#startDuration').text(startMinutes + ":" + startSeconds);
+                }
+            }
+        }, 1000)
+
     });
 
     //set playing info
@@ -167,8 +210,34 @@ function setPlayingInfo() {
 function playSong() {
     playingSong = new Audio(song.src);
     prevSong.pause();
+    $('#startDuration').text("0:00");
+    $("#song-progress").css("width", 0 + "%");
+    isPaused = false;
+    clearInterval(trackProgressTimer);
+    clearInterval(trackProgressBar);
+    i = 0;
+    startSeconds = 0;
+    startMinutes = 0;
     playingSong.play();
     prevSong = playingSong;
 }
 
-function nextSong() {}
+function AudioTrack() {
+    // track progress bar
+    var onePercentDuration = (song.duration / 100);
+    var endTime = song.duration;
+    trackProgressBar = setInterval(function () {
+        if (!isPaused) {
+            $("#song-progress").css("width", i + "%");
+            i++; // incrementation
+            startTime = startTime + onePercentDuration;
+            // reset progress bar
+            if (i == 101) {
+                clearInterval(trackProgressBar);
+                i = 0;
+                $("#song-progress").css("width", i + "%");
+            }
+        }
+    }, onePercentDuration * 1000);
+
+}
