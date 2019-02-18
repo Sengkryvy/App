@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     $(document).on('input', '#volume-input', function() {
         volume = $("#volume-input").val();
-        console.log(volume);
+        // console.log(volume);
         playingSong.volume = volume/100;
     });
 
@@ -235,6 +235,8 @@ function playSong() {
     i = 0;
     startSeconds = 0;
     startMinutes = 0;
+    volume = $("#volume-input").val();
+    playingSong.volume = volume/100;
     playingSong.play();
     prevSong = playingSong;
 }

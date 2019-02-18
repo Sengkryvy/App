@@ -145,10 +145,10 @@ input[type="range"] {
     height: 4px;
     /* width: 170px; */
     /* background-color: rgb(74, 123, 197); */
-  }
-  
-  
-  input[type="range"]::-webkit-slider-thumb {
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 20px;
@@ -156,5 +156,32 @@ input[type="range"] {
     /* border: 1px solid blue; */
     border-radius: 50%;
     background: #fff;
+    cursor: pointer;
     /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6); */
-  }
+}
+
+input[type="range"].progress-bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* border-radius: 26px; */
+    height: 4px;
+    /* width: 170px; */
+    /* background-color: rgb(74, 123, 197); */
+}
+
+
+input[type="range"].progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 10px;
+    height: 10px;
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    background: rgb(94, 92, 92);
+    cursor: pointer;
+    /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6); */
+}
+
+.progress {
+    cursor: pointer;
+}
