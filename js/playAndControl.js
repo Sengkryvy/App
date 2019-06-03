@@ -1,3 +1,4 @@
+
 var prevSong = new Audio;
 var playingSong = null;
 var song;
